@@ -4,8 +4,7 @@ import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { TRoutesNavigationStack } from '../../types/Home/TRoutesNavigationStack';
 import PaginaBase from '../PaginaBase';
 
-export default function Home(/* navigation: NativeStackNavigationProp<TRoutesNavigationStack> */) {
-  const navigation = useNavigation<NativeStackNavigationProp<TRoutesNavigationStack>>()
+export default function Home({navigation}: {navigation: NativeStackNavigationProp<TRoutesNavigationStack>}) {
   return (
     <View style={styles.container}>
       <PaginaBase>
@@ -17,12 +16,12 @@ export default function Home(/* navigation: NativeStackNavigationProp<TRoutesNav
           <Text style={styles.text}>
             Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!
           </Text>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Login")}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
             <Text style={styles.textoBotao}>
               Login
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Cadastro")}>
             <Text style={styles.textoBotao}>
               Cadastro
             </Text>

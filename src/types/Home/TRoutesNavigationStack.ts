@@ -1,5 +1,5 @@
 export type TRoutesNavigationStack = {
-  Home: undefined;
-  Login: undefined;
-  Cadastro: undefined;
+  Home: object | undefined;
+  Login: object | undefined;
+  Cadastro: object | undefined;
 }
