@@ -4,7 +4,7 @@ import { Link, useRoute } from "@react-navigation/native";
 import uuid from 'react-native-uuid';
 export default function Sobre({ navigation }) {
     const route = useRoute();
-    const { nome, imagem, descricao, localidade } = route.params;
+    const { nome, imagem, descricao, localidade }: any = route.params;
 
     return (
         <View style={styles.container}>
@@ -15,7 +15,7 @@ export default function Sobre({ navigation }) {
                         <Text style={styles.text}>{nome}</Text>
 
                         {
-                            descricao.informacoes.map((item) => <Text style={styles.textList} key={uuid.v4()}>{item}</Text>)
+                            descricao.informacoes.map((item) => <Text style={styles.textList} /* key={uuid.v4()} */>{item}</Text>)
                         }
 
                         <View style={styles.containerContato}>
@@ -49,7 +49,7 @@ export default function Sobre({ navigation }) {
                         <Text style={styles.textResumo}>{descricao.resumo}</Text>
 
                         {
-                            descricao.fotos.map((item) => <Image source={item} key={uuid.v4()} style={styles.image} />)
+                            descricao.fotos.map((item) => <Image source={item} /* key={uuid.v4()} */ style={styles.image} />)
                         }
                     </View>
 

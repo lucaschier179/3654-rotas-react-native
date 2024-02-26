@@ -1,5 +1,5 @@
 import React from 'react';
-import { Image, StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import PaginaBase from '../PaginaBase';
 export default function Home() {
 
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 26,
-        fontWeight: 500,
+        fontWeight: "500",
     },
     contentContainer: {
         paddingLeft: 56,

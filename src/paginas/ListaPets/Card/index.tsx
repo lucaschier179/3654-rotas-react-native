@@ -13,7 +13,7 @@ export default function Card({ nome, idade, porte, imagem, caracteristicas, loca
             })}>
                 <Image source={imagem} />
             </TouchableOpacity>
-            <View style={styles.containerInformacoes}>
+            <View style={styles.containerChat}>
                 <Text style={styles.title}>{nome}</Text>
 
                 <View style={styles.informacoes}>
