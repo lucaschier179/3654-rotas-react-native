@@ -1,6 +1,7 @@
-import 'react-native-gesture-handler';
+import { Poppins_400Regular, useFonts } from '@expo-google-fonts/poppins';
 import React from 'react';
-import { useFonts, Poppins_400Regular } from '@expo-google-fonts/poppins';
+import { StatusBar } from 'react-native';
+import 'react-native-gesture-handler';
 import Home from './src/paginas/Home';
 export default function App() {
   let [fontsLoaded, fontError] = useFonts({
@@ -12,6 +13,9 @@ export default function App() {
   }
 
   return (
-    <Home />
+    <>
+      <Home />
+      <StatusBar backgroundColor="#000" />
+    </>
   );
 }
