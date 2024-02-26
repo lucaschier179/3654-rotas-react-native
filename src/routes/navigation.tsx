@@ -8,9 +8,21 @@ const Stack = createStackNavigator();
 export default function Navigation() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Login" component={Login} />
+      <Stack.Navigator
+        initialRouteName="Home"
+        screenOptions={{
+          headerTitle: "",
+          headerShown: false
+        }}
+      >
+        <Stack.Screen
+          name="Home"
+          component={Home}
+        />
+        <Stack.Screen
+          name="Login"
+          component={Login}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )
