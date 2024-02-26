@@ -1,19 +1,19 @@
-import dunga from '../assets/Dunga.png';
-import felicia from '../assets/Felicia.png';
-import sirius from '../assets/Sirius.png';
-import fiona from '../assets/Fiona.png';
+import dunga from '../../assets/Dunga.png';
+import felicia from '../../assets/Felicia.png';
+import sirius from '../../assets/Sirius.png';
+import fiona from '../../assets/Fiona.png';
 
-import dunga1 from '../assets/Dunga1.png';
-import dunga2 from '../assets/Dunga2.png';
+import dunga1 from '../../assets/Dunga1.png';
+import dunga2 from '../../assets/Dunga2.png';
 
-import felicia1 from '../assets/Felicia1.png';
-import felicia2 from '../assets/Felicia2.png';
+import felicia1 from '../../assets/Felicia1.png';
+import felicia2 from '../../assets/Felicia2.png';
 
-import sirius1 from '../assets/Sirius1.png';
-import sirius2 from '../assets/Sirius2.png';
+import sirius1 from '../../assets/Sirius1.png';
+import sirius2 from '../../assets/Sirius2.png';
 
-import fiona1 from '../assets/Fiona1.png';
-import fiona2 from '../assets/Fiona2.png';
+import fiona1 from '../../assets/Fiona1.png';
+import fiona2 from '../../assets/Fiona2.png';
 
 const pets = [
     {

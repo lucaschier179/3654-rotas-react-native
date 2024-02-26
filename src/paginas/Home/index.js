@@ -7,7 +7,7 @@ export default function Home() {
         <View style={styles.container}>
             <PaginaBase>
                 <View style={styles.contentContainer}>
-                    <Image source={require('../../assets/Logo.png')} style={styles.imagem} />
+                    <Image source={require('../../../assets/Logo.png')} style={styles.imagem} />
                     <Text style={[styles.text, styles.title]}>Boas-vindas!</Text>
                     <Text style={styles.text}>Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!</Text>
 
@@ -19,7 +19,7 @@ export default function Home() {
                         <Text style={styles.textoBotao}>Cadastro</Text>
                     </TouchableOpacity>
 
-                    <Image source={require('../../assets/CachorroEGato.png')} style={styles.imagem}></Image>
+                    <Image source={require('../../../assets/CachorroEGato.png')} style={styles.imagem}></Image>
                 </View>
             </PaginaBase>
         </View>

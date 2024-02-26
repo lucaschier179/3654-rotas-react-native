@@ -23,7 +23,7 @@ export default function Sobre({ navigation }) {
                                 {localidade}</Text>
                             <View style={styles.informacoes}>
                                 <View style={styles.containerInteracoes}>
-                                    <Image source={require('../../assets/chat.png')} />
+                                    <Image source={require('../../../assets/chat.png')} />
                                     <Link to={{
                                         screen: 'Mensagem', params: {
                                             nomePet: nome
@@ -34,7 +34,7 @@ export default function Sobre({ navigation }) {
                                 </View>
 
                                 <View style={styles.containerInteracoes}>
-                                    <Image source={require('../../assets/share.png')} />
+                                    <Image source={require('../../../assets/share.png')} />
                                     <Link to={{
                                         screen: 'Mensagem', params: {
                                             nomePet: nome

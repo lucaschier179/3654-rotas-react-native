@@ -5,7 +5,7 @@ export default function Inbox() {
     return (
         <View style={styles.container}>
             <ImageBackground
-                source={require('../../assets/Vector.png')}
+                source={require('../../../assets/Vector.png')}
                 style={styles.backgroundImage}
                 imageStyle={{
                     resizeMode: "cover",

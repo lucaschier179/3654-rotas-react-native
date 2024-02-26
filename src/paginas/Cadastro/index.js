@@ -12,7 +12,7 @@ export default function Cadastro() {
         <View style={styles.container}>
             <PaginaBase>
                 <ImageBackground
-                    source={require('../../assets/Patas.png')}
+                    source={require('../../../assets/Patas.png')}
                     style={styles.backgroundImagePatas}
                     imageStyle={{
                         height: 200,
@@ -20,7 +20,7 @@ export default function Cadastro() {
                     }}
                 >
                     <View style={styles.contentContainer}>
-                        <Image source={require('../../assets/Logo-azul.png')} style={styles.imagem} />
+                        <Image source={require('../../../assets/Logo-azul.png')} style={styles.imagem} />
                         <View>
                             <Text style={styles.text}>Ainda não tem cadastro?</Text>
                             <Text style={styles.text}>Então, antes de buscar seu melhor amigo, precisamos de alguns dados:</Text>

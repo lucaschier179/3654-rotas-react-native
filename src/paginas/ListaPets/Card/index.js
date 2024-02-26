@@ -26,7 +26,7 @@ export default function Card({ nome, idade, porte, imagem, caracteristicas, loca
                     <Text style={styles.local}>
                         {localidade}</Text>
                     <View style={styles.containerChat}>
-                        <Image source={require('../../../assets/chat.png')} />
+                        <Image source={require('../../../../assets/chat.png')} />
                         <Link to={{
                             screen: 'Mensagem', params: {
                                 nomePet: nome

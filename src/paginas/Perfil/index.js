@@ -14,7 +14,7 @@ export default function Perfil() {
                             <Text style={styles.perfilTitle}>Perfil</Text>
                             <View>
                                 <Text style={styles.perfilLabel}>Foto</Text>
-                                <Image style={styles.perfilImagem} source={require('../../assets/avatar.png')} />
+                                <Image style={styles.perfilImagem} source={require('../../../assets/avatar.png')} />
                                 <Text style={styles.perfilInfo}>Clique na foto para editar</Text>
                             </View>
                             <View>

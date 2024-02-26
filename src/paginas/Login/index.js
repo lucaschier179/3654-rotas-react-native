@@ -11,7 +11,7 @@ export default function Login({ navigation }) {
         <View style={styles.container}>
             <PaginaBase>
                 <ImageBackground
-                    source={require('../../assets/Patas.png')}
+                    source={require('../../../assets/Patas.png')}
                     style={styles.backgroundImagePatas}
                     imageStyle={{
                         height: 200,
@@ -19,7 +19,7 @@ export default function Login({ navigation }) {
                     }}
                 >
                     <View style={styles.contentContainer}>
-                        <Image source={require('../../assets/Logo-azul.png')} style={styles.imagem} />
+                        <Image source={require('../../../assets/Logo-azul.png')} style={styles.imagem} />
                         <Text style={styles.text}>Já tem conta? Faça seu login:</Text>
                         <TextInput
                             style={styles.input}

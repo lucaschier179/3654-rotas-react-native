@@ -2,7 +2,7 @@ import { ImageBackground, StyleSheet } from 'react-native';
 
 export default function PaginaBase({ children }) {
     return <ImageBackground
-        source={require('../../assets/Vector.png')}
+        source={require('../../../assets/Vector.png')}
         style={styles.backgroundImage}
         imageStyle={{
             resizeMode: "cover",
