@@ -10,7 +10,7 @@ import Mensagem from "../paginas/Mensagem";
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
-function TabRoutes() {
+export function TabRoutes() {
   return (
     <Tab.Navigator>
       <Tab.Screen name="ListaPets" component={ListaPets} />
@@ -40,6 +40,10 @@ export default function Navigation() {
         <Stack.Screen
           name="Cadastro"
           component={Cadastro}
+        />
+        <Stack.Screen
+          name="Tab"
+          component={TabRoutes}
         />
       </Stack.Navigator>
     </NavigationContainer>

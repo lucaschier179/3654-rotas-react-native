@@ -1,22 +1,21 @@
-import { useNavigation } from '@react-navigation/native';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { TRoutesNavigationStack } from '../../types/Home/TRoutesNavigationStack';
-import PaginaBase from '../PaginaBase';
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import { TRoutesNavigationStack } from "../../types/Home/TRoutesNavigationStack";
+import PaginaBase from "../PaginaBase";
 
-export default function Home({navigation}: {navigation: NativeStackNavigationProp<TRoutesNavigationStack>}) {
+export default function Home({ navigation }: { navigation: NativeStackNavigationProp<TRoutesNavigationStack> }) {
   return (
     <View style={styles.container}>
       <PaginaBase>
         <View style={styles.contentContainer}>
-          <Image source={require('../../../assets/Logo.png')} style={styles.imagem} />
+          <Image source={require("../../../assets/Logo.png")} style={styles.imagem} />
           <Text style={[styles.text, styles.title]}>
             Boas-vindas!
           </Text>
           <Text style={styles.text}>
             Que tal mudar sua vida adotando seu novo melhor amigo? Vem com a gente!
           </Text>
-          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Login')}>
+          <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Login")}>
             <Text style={styles.textoBotao}>
               Login
             </Text>
@@ -26,7 +25,7 @@ export default function Home({navigation}: {navigation: NativeStackNavigationPro
               Cadastro
             </Text>
           </TouchableOpacity>
-          <Image source={require('../../../assets/CachorroEGato.png')} style={styles.imagem} />
+          <Image source={require("../../../assets/CachorroEGato.png")} style={styles.imagem} />
         </View>
       </PaginaBase>
     </View>
@@ -35,15 +34,15 @@ export default function Home({navigation}: {navigation: NativeStackNavigationPro
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: '#3772FF',
+    backgroundColor: "#3772FF",
     flex: 1,
   },
   text: {
     color: "white",
-    textAlign: 'center',
-    fontFamily: 'PoppinsRegular',
+    textAlign: "center",
+    fontFamily: "PoppinsRegular",
     fontSize: 16,
-    fontWeight: '400',
+    fontWeight: "400",
   },
   title: {
     fontSize: 26,
@@ -56,13 +55,13 @@ const styles = StyleSheet.create({
     gap: 32,
   },
   imagem: {
-    alignSelf: 'center',
+    alignSelf: "center",
   },
 
   button: {
     borderRadius: 8,
-    backgroundColor: '#FC7071', // Pode ser ajustado conforme necessário
-    shadowColor: 'rgba(0, 0, 0, 0.12)',
+    backgroundColor: "#FC7071", // Pode ser ajustado conforme necessário
+    shadowColor: "rgba(0, 0, 0, 0.12)",
     shadowOffset: {
       width: 2,
       height: 2,
@@ -72,12 +71,12 @@ const styles = StyleSheet.create({
     elevation: 4, // Adiciona a elevação para sombra no Android
     padding: 10, // Pode ser ajustado conforme necessário
     width: 200,
-    alignSelf: 'center',
+    alignSelf: "center",
   },
   textoBotao: {
-    color: 'white',
-    textAlign: 'center',
+    color: "white",
+    textAlign: "center",
     fontSize: 16,
-    fontWeight: '600',
+    fontWeight: "600",
   },
 });
