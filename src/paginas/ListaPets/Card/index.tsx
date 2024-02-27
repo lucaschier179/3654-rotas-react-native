@@ -13,7 +13,7 @@ export default function Card({ nome, idade, porte, imagem, caracteristicas, loca
             })}>
                 <Image source={imagem} />
             </TouchableOpacity>
-            <View style={styles.containerChat}>
+            <View>
                 <Text style={styles.title}>{nome}</Text>
 
                 <View style={styles.informacoes}>
@@ -81,5 +81,4 @@ const styles = StyleSheet.create({
         gap: 8,
         alignItems: 'center'
     }
-
 })
