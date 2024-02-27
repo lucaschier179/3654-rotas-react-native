@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import { Image } from "react-native";
+import { Image, StyleSheet } from "react-native";
 import Cadastro from "../paginas/Cadastro";
 import Home from "../paginas/Home";
 import ListaPets from "../paginas/ListaPets";
@@ -15,7 +15,7 @@ export function TabRoutes() {
   return (
     <Tab.Navigator
       screenOptions={{
-        headerShown: false
+        headerShown: false,
       }}
     >
       <Tab.Screen
@@ -25,14 +25,22 @@ export function TabRoutes() {
           tabBarIcon: () => (
             <Image
               source={require("../../assets/pets-green.png")}
-              style={{ width: 24, height: 24 }}
+              style={{ width: 20, height: 20 }}
             />
-          )
+          ),
         }}
       />
       <Tab.Screen
         name="Mensagens"
         component={Mensagem}
+        options={{
+          tabBarIcon: () => (
+            <Image
+              source={require("../../assets/mensagens.png")}
+              style={{ width: 20, height: 20 }}
+            />
+          )
+        }}
       />
     </Tab.Navigator>
   )
