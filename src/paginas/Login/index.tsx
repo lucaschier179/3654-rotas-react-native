@@ -1,10 +1,10 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { useState } from "react";
 import { Image, ImageBackground, StyleSheet, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { TRoutesNavigationStack } from "../../types/Home/TRoutesNavigationStack";
+import { TRoutesNavigationStackParams } from "../../types/Home/TRoutesNavigationStack";
 import PaginaBase from "../PaginaBase";
 
-export default function Login({ navigation }: { navigation: NativeStackNavigationProp<TRoutesNavigationStack> }) {
+export default function Login({ navigation }: { navigation: NativeStackNavigationProp<TRoutesNavigationStackParams> }) {
   const [nome, onChangeNome] = useState("");
   const [senha, onChangeSenha] = useState("");
 

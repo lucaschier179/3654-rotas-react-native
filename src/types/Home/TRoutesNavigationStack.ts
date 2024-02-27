@@ -1,15 +1,21 @@
 import { ImageSourcePropType } from "react-native";
 
-export type TRoutesNavigationStack = {
+export type TRoutesNavigationStackParams = {
   Home: object | undefined;
   Login: object | undefined;
   Cadastro: object | undefined;
   ListaPets: object | undefined;
   Tab: object | undefined;
-  Sobre: {
-    nome: string;
-    imagem: ImageSourcePropType;
-    localidade: string;
-    descricao: string;
-  } | undefined;
+  Sobre: TParamsSobreProps | undefined;
+}
+
+export type TParamsSobreProps = {
+  nome: string;
+  imagem: ImageSourcePropType;
+  localidade: string;
+  descricao: {
+    informacoes: string[];
+    resumo: string;
+    fotos: ImageSourcePropType[]
+  };
 }

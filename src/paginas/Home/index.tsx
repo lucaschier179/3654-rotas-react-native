@@ -1,9 +1,9 @@
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
-import { TRoutesNavigationStack } from "../../types/Home/TRoutesNavigationStack";
+import { TRoutesNavigationStackParams } from "../../types/Home/TRoutesNavigationStack";
 import PaginaBase from "../PaginaBase";
 
-export default function Home({ navigation }: { navigation: NativeStackNavigationProp<TRoutesNavigationStack> }) {
+export default function Home({ navigation }: { navigation: NativeStackNavigationProp<TRoutesNavigationStackParams> }) {
   return (
     <View style={styles.container}>
       <PaginaBase>

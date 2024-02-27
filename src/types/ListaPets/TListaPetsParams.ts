@@ -1,6 +1,8 @@
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { ImageSourcePropType } from "react-native";
+import { TRoutesNavigationStackParams } from "../Home/TRoutesNavigationStack";
 
-export type TPetsDetailsProps = {
+export type TListaPetsParams = {
   nome: string;
   idade: string;
   porte: string;
@@ -12,4 +14,5 @@ export type TPetsDetailsProps = {
     resumo: string;
     fotos: ImageSourcePropType[]
   };
+  navigation: NativeStackNavigationProp<TRoutesNavigationStackParams>
 }

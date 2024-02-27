@@ -1,9 +1,9 @@
 import { Link } from "@react-navigation/native";
 import { Image, StyleSheet, Text, View } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { TPetsDetailsProps } from "../../../types/ListaPets/Card/TPetsDetailsProps";
+import { TListaPetsParams } from "../../../types/ListaPets/TListaPetsParams";
 
-export default function Card({ nome, idade, porte, imagem, caracteristicas, localidade, descricao, navigation }: TPetsDetailsProps) {
+export default function Card({ nome, idade, porte, imagem, caracteristicas, localidade, descricao, navigation }: TListaPetsParams) {
   return (
     <View style={styles.container}>
       <TouchableOpacity onPress={() => navigation.navigate("Sobre", {
