@@ -8,9 +8,31 @@ import ListaPets from "../paginas/ListaPets";
 import Login from "../paginas/Login";
 import Mensagem from "../paginas/Mensagem";
 import Sobre from "../paginas/Sobre";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import Perfil from "../paginas/Perfil";
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
+const Drawer = createDrawerNavigator();
+
+function DrawerRoutes() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen
+        name="Lista de Pets"
+        component={ListaPets}
+      />
+      <Drawer.Screen
+        name="Perfil"
+        component={Perfil}
+      />
+      <Drawer.Screen
+        name="Sair"
+        component={Home}
+      />
+    </Drawer.Navigator>
+  )
+}
 
 export function TabRoutes() {
   return (
@@ -77,7 +99,7 @@ export default function Navigation() {
           name="Sobre"
           component={Sobre}
         />
-        <Stack.Screen 
+        <Stack.Screen
           name="Mensagem"
           component={Mensagem}
         />

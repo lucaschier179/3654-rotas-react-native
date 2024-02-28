@@ -38,7 +38,7 @@ export default function Card({ nome, idade, porte, imagem, caracteristicas, loca
             <Link
               style={styles.local}
               to={{
-                screen: "Mensagem", 
+                screen: "Mensagem",
                 params: {
                   nomePet: nome
                 },

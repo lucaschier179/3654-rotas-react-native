@@ -1,9 +1,7 @@
-import { View, ScrollView, StyleSheet, Image, Text, ImageSourcePropType } from "react-native";
-import PaginaBase from "../PaginaBase";
 import { Link } from "@react-navigation/native";
-import uuid from "react-native-uuid";
+import { Image, ImageSourcePropType, ScrollView, StyleSheet, Text, View } from "react-native";
 import { RouteProps } from "../../types/routes/TRoute";
-import { TRoutesNavigationStackParams } from "../../types/Home/TRoutesNavigationStack";
+import PaginaBase from "../PaginaBase";
 
 interface IRouteSobreParams {
   nome: string;
