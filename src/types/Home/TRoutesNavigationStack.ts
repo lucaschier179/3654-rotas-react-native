@@ -7,6 +7,7 @@ export type TRoutesNavigationStackParams = {
   ListaPets: object | undefined;
   Tab: object | undefined;
   Sobre: TParamsSobreProps | undefined;
+  Mensagem: object | undefined;
 }
 
 export type TParamsSobreProps = {

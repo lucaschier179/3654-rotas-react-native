@@ -77,6 +77,10 @@ export default function Navigation() {
           name="Sobre"
           component={Sobre}
         />
+        <Stack.Screen 
+          name="Mensagem"
+          component={Mensagem}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

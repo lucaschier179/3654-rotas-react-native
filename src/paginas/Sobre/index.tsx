@@ -1,10 +1,9 @@
 import { View, ScrollView, StyleSheet, Image, Text, ImageSourcePropType } from "react-native";
 import PaginaBase from "../PaginaBase";
-import { Link, useRoute } from "@react-navigation/native";
+import { Link } from "@react-navigation/native";
 import uuid from "react-native-uuid";
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
-import { TRoutesNavigationStackParams } from "../../types/Home/TRoutesNavigationStack";
 import { RouteProps } from "../../types/routes/TRoute";
+import { TRoutesNavigationStackParams } from "../../types/Home/TRoutesNavigationStack";
 
 interface IRouteSobreParams {
   nome: string;
@@ -17,7 +16,7 @@ interface IRouteSobreParams {
   };
 }
 
-export default function Sobre(props: RouteProps<IRouteSobreParams>) {
+export default function Sobre(props: RouteProps<IRouteSobreParams>, routes: TRoutesNavigationStackParams) {
   const { nome, imagem, localidade, descricao }: IRouteSobreParams = props.route.params
 
   return (
@@ -30,7 +29,11 @@ export default function Sobre(props: RouteProps<IRouteSobreParams>) {
               {nome}
             </Text>
             {
-              descricao.informacoes.map((item: string) => <Text style={styles.textList} /* key={uuid.v4()} */>{item}</Text>)
+              descricao.informacoes.map((item: string) =>
+                <Text style={styles.textList} /* key={uuid.v4()} */>
+                  {item}
+                </Text>
+              )
             }
             <View style={styles.containerContato}>
               <Text style={styles.local}>
@@ -39,21 +42,29 @@ export default function Sobre(props: RouteProps<IRouteSobreParams>) {
               <View style={styles.informacoes}>
                 <View style={styles.containerInteracoes}>
                   <Image source={require("../../../assets/chat.png")} />
-                  <Link to={{
-                    screen: "Mensagem", params: {
-                      nomePet: nome
-                    },
-                  }} style={styles.local}>
+                  <Link
+                    to={{
+                      screen: "Mensagem",
+                      params: {
+                        nomePet: nome
+                      },
+                    }}
+                    style={styles.local}
+                  >
                     Falar com responsável
                   </Link>
                 </View>
                 <View style={styles.containerInteracoes}>
                   <Image source={require("../../../assets/share.png")} />
-                  <Link to={{
-                    screen: "Mensagem", params: {
-                      nomePet: nome
-                    },
-                  }} style={styles.local}>
+                  <Link
+                    to={{
+                      screen: "Mensagem",
+                      params: {
+                        nomePet: nome
+                      },
+                    }}
+                    style={styles.local}
+                  >
                     Compartilhar
                   </Link>
                 </View>
@@ -63,7 +74,9 @@ export default function Sobre(props: RouteProps<IRouteSobreParams>) {
               {descricao.resumo}
             </Text>
             {
-              descricao.fotos.map((item: ImageSourcePropType) => <Image source={item} /* key={uuid.v4()} */ style={styles.image} />)
+              descricao.fotos.map((image: ImageSourcePropType) =>
+                <Image source={image} /* key={uuid.v4()} */ style={styles.image} />
+              )
             }
           </View>
         </PaginaBase>

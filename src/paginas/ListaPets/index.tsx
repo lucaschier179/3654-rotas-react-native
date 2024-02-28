@@ -14,7 +14,7 @@ export default function ListaPets({ navigation, route }: RouteProps<undefined>) 
           </Text>
           <FlatList
             data={pets}
-            renderItem={({ item }) => <Card {...item} key={route.key} navigation={navigation} />}
+            renderItem={({ item }) => <Card {...item} navigation={navigation} />}
           >
           </FlatList>
         </View>

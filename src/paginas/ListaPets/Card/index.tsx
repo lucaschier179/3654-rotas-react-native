@@ -38,7 +38,8 @@ export default function Card({ nome, idade, porte, imagem, caracteristicas, loca
             <Link
               style={styles.local}
               to={{
-                screen: "Mensagem", params: {
+                screen: "Mensagem", 
+                params: {
                   nomePet: nome
                 },
               }}
@@ -61,7 +62,9 @@ const styles = StyleSheet.create({
     justifyContent: "space-around",
     paddingVertical: 16,
     paddingHorizontal: 21,
-    marginBottom: 16
+    marginBottom: 16,
+    marginHorizontal: 4,
+    borderRadius: 8
   },
   title: {
     color: "#3772FF",
