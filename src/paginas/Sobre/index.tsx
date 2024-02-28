@@ -16,7 +16,7 @@ interface IRouteSobreParams {
   };
 }
 
-export default function Sobre(props: RouteProps<IRouteSobreParams>, routes: TRoutesNavigationStackParams) {
+export default function Sobre(props: RouteProps<IRouteSobreParams>) {
   const { nome, imagem, localidade, descricao }: IRouteSobreParams = props.route.params
 
   return (
@@ -29,8 +29,8 @@ export default function Sobre(props: RouteProps<IRouteSobreParams>, routes: TRou
               {nome}
             </Text>
             {
-              descricao.informacoes.map((item: string) =>
-                <Text style={styles.textList} /* key={uuid.v4()} */>
+              descricao.informacoes.map((item: string, index) =>
+                <Text style={styles.textList} key={index}>
                   {item}
                 </Text>
               )
@@ -74,8 +74,8 @@ export default function Sobre(props: RouteProps<IRouteSobreParams>, routes: TRou
               {descricao.resumo}
             </Text>
             {
-              descricao.fotos.map((image: ImageSourcePropType) =>
-                <Image source={image} /* key={uuid.v4()} */ style={styles.image} />
+              descricao.fotos.map((image: ImageSourcePropType, index) =>
+                <Image source={image} key={index} style={styles.image} />
               )
             }
           </View>
