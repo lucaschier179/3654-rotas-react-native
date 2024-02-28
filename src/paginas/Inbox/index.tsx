@@ -1,5 +1,5 @@
 import { FlatList, ImageBackground, StyleSheet, Text, View } from "react-native";
-import conversas from "../../mocks/conversas";
+import { conversas } from "../../mocks/conversas";
 
 export default function Inbox() {
     return (

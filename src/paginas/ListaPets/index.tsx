@@ -1,11 +1,10 @@
-import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import pets from "../../mocks/pets";
-import { TRoutesNavigationStackParams } from "../../types/Home/TRoutesNavigationStack";
+import { pets } from "../../mocks/pets";
+import { RouteProps } from "../../types/routes/TRoute";
 import PaginaBase from "../PaginaBase";
 import Card from "./Card";
 
-export default function ListaPets({ navigation }: { navigation: NativeStackNavigationProp<TRoutesNavigationStackParams> }) {
+export default function ListaPets({ navigation, route }: RouteProps<undefined>) {
   return (
     <View style={styles.container}>
       <PaginaBase>
@@ -15,7 +14,7 @@ export default function ListaPets({ navigation }: { navigation: NativeStackNavig
           </Text>
           <FlatList
             data={pets}
-            renderItem={({ item }) => <Card {...item} navigation={navigation} />}
+            renderItem={({ item }) => <Card {...item} key={route.key} navigation={navigation} />}
           >
           </FlatList>
         </View>
