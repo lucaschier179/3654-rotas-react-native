@@ -17,20 +17,57 @@ const Drawer = createDrawerNavigator();
 
 function DrawerRoutes() {
   return (
-    <Drawer.Navigator>
+    <Drawer.Navigator
+      screenOptions={{
+        drawerStyle: {
+          backgroundColor: "#35D6AD"
+        },
+        drawerLabelStyle: {
+          color: "#FFFFFF",
+          fontSize: 14,
+          fontFamily: "PoppinsRegular",
+          fontWeight: "400",
+          lineHeight: 20
+        },
+        headerTransparent: true,
+        title: ""
+      }}>
       <Drawer.Screen
         name="Lista de Pets - Drawer Navigation"
         component={TabRoutes}
+        options={{
+          drawerIcon: () => (
+            <Image
+              source={require("../../assets/pets.png")}
+              style={{ width: 24, height: 24 }}
+            />
+          )
+        }}
       />
       <Drawer.Screen
         name="Perfil"
         component={Perfil}
+        options={{
+          drawerIcon: () => (
+            <Image
+              source={require("../../assets/settings.png")}
+              style={{ width: 24, height: 24 }}
+            />
+          )
+        }}
       />
       <Drawer.Screen
         name="Sair"
         component={Home}
+        options={{
+          drawerIcon: () => (
+            <Image
+              source={require("../../assets/logout.png")}
+              style={{ width: 24, height: 24 }}
+            />
+          )
+        }}
       />
-      
     </Drawer.Navigator>
   )
 }
@@ -52,6 +89,9 @@ export function TabRoutes() {
               style={{ width: 20, height: 20 }}
             />
           ),
+          tabBarLabelStyle: {
+            color: "#35D6AD"
+          }
         }}
       />
       <Tab.Screen
