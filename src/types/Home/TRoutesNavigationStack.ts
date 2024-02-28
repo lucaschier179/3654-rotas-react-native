@@ -5,7 +5,7 @@ export type TRoutesNavigationStackParams = {
   Login: object | undefined;
   Cadastro: object | undefined;
   ListaPets: object | undefined;
-  Tab: object | undefined;
+  Drawer: object | undefined;
   Sobre: TParamsSobreProps | undefined;
   Mensagem: object | undefined;
 }

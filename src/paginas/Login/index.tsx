@@ -38,7 +38,7 @@ export default function Login({ navigation }: { navigation: NativeStackNavigatio
               placeholder="Digite sua senha"
               placeholderTextColor={"#BCBCBC"}
             />
-            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Tab")}>
+            <TouchableOpacity style={styles.button} onPress={() => navigation.navigate("Drawer")}>
               <Text style={styles.textoBotao}>
                 Entrar
               </Text>
